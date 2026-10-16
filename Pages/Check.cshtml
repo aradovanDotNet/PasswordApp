@@ -1,0 +1,28 @@
+﻿@page
+@model PasswordApp.Pages.CheckModel
+@{
+    var poruka = TempData["Poruka"] as string;
+}
+
+<h1>Check Password Screen</h1>
+
+@if (!string.IsNullOrEmpty(poruka))
+{
+    <div>
+        <span>@poruka</span>
+    </div>
+}
+
+<div>
+    <form method="post">
+            <div>
+                <label asp-for="Password"></label>
+                <input asp-for="Password"/>
+                <span asp-validation-for="Password"></span>
+            </div>
+            
+        <div >
+            <button type="submit" class="btn btn-primary">Check Password</button>
+        </div>
+    </form>
+</div>

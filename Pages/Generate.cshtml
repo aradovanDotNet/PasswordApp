@@ -1,0 +1,13 @@
+﻿@page
+@model PasswordApp.Pages.GenerateModel
+@{
+}
+
+<h1>Lista lozinki</h1>
+
+@foreach (var password in Model.Passwords)
+{
+    <div>
+        <span>@password</span>
+    </div>
+}
